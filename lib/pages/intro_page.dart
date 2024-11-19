@@ -34,7 +34,12 @@ class IntroPage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
-            Mybutton(onTap: onTap, child: child)
+
+            const SizedBox(height: 25),
+            Mybutton(
+              onTap: () {},
+              child: Icon(Icons.arrow_forward),
+            ),
           ],
         ),
       ),
