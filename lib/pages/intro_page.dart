@@ -1,4 +1,4 @@
-import 'package:ecommerce/components/mybutton.dart';
+import 'package:ecommerce/components/my_button.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
@@ -37,7 +37,7 @@ class IntroPage extends StatelessWidget {
 
             const SizedBox(height: 25),
             Mybutton(
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, '/shop_page'),
               child: Icon(Icons.arrow_forward),
             ),
           ],
