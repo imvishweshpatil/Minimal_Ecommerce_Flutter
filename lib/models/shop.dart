@@ -1,35 +1,33 @@
 import 'package:ecommerce/models/product.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter/foundation.dart';
 
-class Shop {
+
+class Shop extends ChangeNotifier{
   final List<Product> _shop = [
     Product(
-        name: "product1",
-        price: 99.99,
-        description: "item_description",
-        //imagePath: imagePath
+        name: "Sony Headphone",
+        price: 1999,
+        description: "Headphones Sony WX100",
+        imagePath: 'assets/headphones.jpg'
     ),Product(
-        name: "product1",
-        price: 99.99,
-        description: "item_description",
-        //imagePath: imagePath
+        name: "Tshirt",
+        price: 199.99,
+        description: "Yellow Tshirt-Zara",
+        imagePath: 'assets/shirt.jpg'
     ),
     Product(
-        name: "product2",
-        price: 90.99,
-        description: "item_description",
-        //imagePath: imagePath
+        name: "Puma",
+        price: 1990.99,
+        description: "Puma running black shoes",
+        imagePath: 'assets/shoes.jpg'
     ),
     Product(
-        name: "product3",
-        price: 95.99,
-        description: "item_description",
-        //imagePath: imagePath
-    ),
-    Product(
-        name: "product4",
-        price: 93.99,
-        description: "item_description",
-        //imagePath: imagePath
+        name: "Titan Analog",
+        price: 1295.99,
+        description: "Titan analog black watch",
+        imagePath: 'assets/watch.jpg'
+
     ),
   ];
 
@@ -41,9 +39,11 @@ class Shop {
 
   void addToCart(Product item) {
     _cart.add(item);
+    notifyListeners();
   }
 
   void removeFromCart(Product item) {
     _cart.remove(item);
+    notifyListeners();
   }
 }
